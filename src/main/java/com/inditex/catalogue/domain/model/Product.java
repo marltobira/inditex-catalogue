@@ -11,9 +11,9 @@ import lombok.Data;
 @Table(name = "product")
 public class Product {
 
-    @Id
-    private Long id;
+  @Id
+  private Long id;
 
-    @Column(name = "description")
-    private String description;
+  @Column(name = "description")
+  private String description;
 }

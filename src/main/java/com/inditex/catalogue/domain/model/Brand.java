@@ -8,9 +8,9 @@ import lombok.Data;
 @Table(name = "brand")
 public class Brand {
 
-    @Id
-    private Long id;
+  @Id
+  private Long id;
 
-    @Column(name = "description")
-    private String description;
+  @Column(name = "description")
+  private String description;
 }
