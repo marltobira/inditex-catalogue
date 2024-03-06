@@ -1,5 +1,6 @@
 package com.inditex.catalogue.domain.model;
 
+import com.inditex.catalogue.adapter.model.CurrencyEnum;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,7 +19,7 @@ public class Price {
 
     @ManyToOne
     @JoinColumn(name = "brand_id", referencedColumnName = "id")
-    private Brand brandId;
+    private Brand brand;
 
     @Column(name = "start_date")
     private Timestamp startDate;
@@ -29,8 +30,9 @@ public class Price {
     @Column(name = "price_list")
     private Long priceList;
 
-    @Column(name = "product_id")
-    private Long productId;
+    @ManyToOne
+    @JoinColumn(name = "product_id", referencedColumnName = "id")
+    private Product product;
 
     @Column(name = "priority")
     private Integer priority;
@@ -39,5 +41,5 @@ public class Price {
     private BigDecimal price;
 
     @Column(name = "curr")
-    private String currency;
+    private CurrencyEnum currency;
 }
