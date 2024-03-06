@@ -11,6 +11,6 @@ public interface PriceDtoMapper {
 
   @Mapping(target = "brandId", source = "brand.id")
   @Mapping(target = "productId", source = "product.id")
-  public PriceDto fromPrice(Price price);
+  PriceDto fromPrice(Price price);
 
 }
