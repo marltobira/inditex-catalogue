@@ -1,5 +1,6 @@
 package com.inditex.catalogue.domain.model;
 
+import com.inditex.catalogue.adapter.config.converter.CurrencyEnumConverter;
 import com.inditex.catalogue.adapter.model.enums.CurrencyEnum;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -40,6 +41,7 @@ public class Price {
   @Column(name = "price")
   private BigDecimal price;
 
+  @Convert(converter = CurrencyEnumConverter.class)
   @Column(name = "curr")
   private CurrencyEnum currency;
 }
