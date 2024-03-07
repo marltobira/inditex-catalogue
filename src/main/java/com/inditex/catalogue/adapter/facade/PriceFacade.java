@@ -17,4 +17,8 @@ public class PriceFacade {
   public List<Price> getPricesByFiler(PriceFilter filter) {
     return priceRepository.findAllByFilter(filter);
   }
+
+  public List<Price> findAll() {
+    return priceRepository.findAll();
+  }
 }
