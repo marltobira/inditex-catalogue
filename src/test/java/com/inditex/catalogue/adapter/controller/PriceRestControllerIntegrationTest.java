@@ -4,6 +4,7 @@ import com.inditex.catalogue.adapter.model.PriceDto;
 import com.inditex.catalogue.adapter.model.filter.PriceFilter;
 import org.apache.coyote.BadRequestException;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,8 +25,8 @@ public class PriceRestControllerIntegrationTest {
   }
 
   @Test
+  @DisplayName("Test 1 - 10:00 del día 14 del producto 35455   para la brand 1")
   void testFindPriceByDate1() {
-    // Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)
     Timestamp applicationDate = Timestamp.valueOf("2020-06-14 10:00:00");
     PriceFilter filter = PriceFilter.builder()
         .brandId(1L)
@@ -45,8 +46,8 @@ public class PriceRestControllerIntegrationTest {
   }
 
   @Test
+  @DisplayName("Test 2 - 16:00 del día 14 del producto 35455   para la brand 1")
   void testFindPriceByDate2() {
-    // Test 2: petición a las 16:00 del día 14 del producto 35455   para la brand 1 (ZARA)
     Timestamp applicationDate = Timestamp.valueOf("2020-06-14 16:00:00");
     PriceFilter filter = PriceFilter.builder()
         .brandId(1L)
@@ -73,8 +74,8 @@ public class PriceRestControllerIntegrationTest {
   }
 
   @Test
+  @DisplayName("Test 3 - 21:00 del día 14 del producto 35455   para la brand 1")
   void testFindPriceByDate3() {
-    // Test 3: petición a las 21:00 del día 14 del producto 35455   para la brand 1 (ZARA)
     Timestamp applicationDate = Timestamp.valueOf("2020-06-14 21:00:00");
     PriceFilter filter = PriceFilter.builder()
         .brandId(1L)
@@ -94,8 +95,8 @@ public class PriceRestControllerIntegrationTest {
   }
 
   @Test
+  @DisplayName("Test 4 - 10:00 del día 15 del producto 35455   para la brand 1")
   void testFindPriceByDate4() {
-    // Test 4: petición a las 10:00 del día 15 del producto 35455   para la brand 1 (ZARA)
     Timestamp applicationDate = Timestamp.valueOf("2020-06-15 10:00:00");
     PriceFilter filter = PriceFilter.builder()
         .brandId(1L)
@@ -122,8 +123,8 @@ public class PriceRestControllerIntegrationTest {
   }
 
   @Test
+  @DisplayName("Test 5 - 21:00 del día 16 del producto 35455   para la brand 1")
   void testFindPriceByDate5() {
-    // Test 5: petición a las 21:00 del día 16 del producto 35455   para la brand 1 (ZARA)
     Timestamp applicationDate = Timestamp.valueOf("2020-06-16 21:00:00");
     PriceFilter filter = PriceFilter.builder()
         .brandId(1L)
