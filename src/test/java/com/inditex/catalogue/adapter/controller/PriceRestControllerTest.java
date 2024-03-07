@@ -27,7 +27,7 @@ public class PriceRestControllerTest {
 
   @Test
   void testFindAll() {
-    Mockito.when(getPriceUseCase.getPricesByFiler(Mockito.any(PriceFilter.class)))
+    Mockito.when(getPriceUseCase.getPricesByFilter(Mockito.any(PriceFilter.class)))
             .thenReturn(List.of(PriceDto.builder().build()));
 
     Assertions.assertDoesNotThrow(

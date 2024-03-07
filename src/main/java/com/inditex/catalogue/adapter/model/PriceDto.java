@@ -16,8 +16,8 @@ public class PriceDto {
 
   private Long productId;
   private Long brandId;
+  private Long priceList;
   private BigDecimal price;
-  private BigDecimal totalAmount;
   private String currency;
   private Timestamp startDate;
   private Timestamp endDate;
