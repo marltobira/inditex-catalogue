@@ -25,7 +25,7 @@ public class PriceRestController {
   @GetMapping
   public ResponseEntity<List<PriceDto>> findAll(
       @Filter @Parameter(name = "filter", in = ParameterIn.QUERY, description = "Filter query") PriceFilter filter) {
-    List<PriceDto> response = getPriceUseCase.getPricesByFiler(filter);
+    List<PriceDto> response = getPriceUseCase.getPricesByFilter(filter);
     return new ResponseEntity<>(response, response.isEmpty() ? HttpStatus.NOT_FOUND : HttpStatus.OK);
   }
 }

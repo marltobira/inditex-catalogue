@@ -16,8 +16,8 @@ public class GetPriceUseCase {
   private final PriceFacade priceFacade;
   private final PriceDtoMapper priceDtoMapper;
 
-  public List<PriceDto> getPricesByFiler(PriceFilter filter) {
-    return priceFacade.getPricesByFiler(filter).stream()
+  public List<PriceDto> getPricesByFilter(PriceFilter filter) {
+    return priceFacade.getPricesByFilter(filter).stream()
         .map(priceDtoMapper::fromPrice)
         .toList();
   }
