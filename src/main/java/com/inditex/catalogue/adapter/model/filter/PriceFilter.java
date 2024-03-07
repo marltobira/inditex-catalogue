@@ -15,6 +15,5 @@ public class PriceFilter {
 
   private Long productId;
   private Long brandId;
-  private Timestamp startDate;
-  private Timestamp endDate;
+  private Timestamp date;
 }

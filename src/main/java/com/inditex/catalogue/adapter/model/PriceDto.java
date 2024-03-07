@@ -21,5 +21,6 @@ public class PriceDto {
   private String currency;
   private Timestamp startDate;
   private Timestamp endDate;
+  private Timestamp applicationDate;
 
 }

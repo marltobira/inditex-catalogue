@@ -14,10 +14,10 @@ public interface PriceRepository extends JpaRepository<Price, Long> {
   @Query(
       value =
           "SELECT p FROM Price p "
-              + "WHERE (:#{#filter.productId} is null OR p.product.id = :#{#filter.productId}) "
-              + "AND (:#{#filter.brandId} is null OR p.brand.id = :#{#filter.brandId}) "
-              + "AND (:#{#filter.startDate} IS NULL OR p.startDate >= :#{#filter.startDate}) "
-              + "AND (:#{#filter.endDate} IS NULL OR p.endDate <= :#{#filter.endDate})")
+              + "WHERE (p.product.id = :#{#filter.productId}) "
+              + "AND (p.brand.id = :#{#filter.brandId}) "
+              + "AND (p.startDate <= :#{#filter.date}) "
+              + "AND (p.endDate >= :#{#filter.date})")
   List<Price> findAllByFilter(PriceFilter filter);
 
 }

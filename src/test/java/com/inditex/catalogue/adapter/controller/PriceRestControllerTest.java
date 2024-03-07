@@ -3,6 +3,7 @@ package com.inditex.catalogue.adapter.controller;
 import com.inditex.catalogue.adapter.model.PriceDto;
 import com.inditex.catalogue.adapter.model.filter.PriceFilter;
 import com.inditex.catalogue.domain.usecase.GetPriceUseCase;
+import org.apache.coyote.BadRequestException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,7 +27,7 @@ public class PriceRestControllerTest {
   }
 
   @Test
-  void testFindAll() {
+  void testFindAll() throws BadRequestException {
     Mockito.when(getPriceUseCase.getPricesByFilter(Mockito.any(PriceFilter.class)))
             .thenReturn(List.of(PriceDto.builder().build()));
 
